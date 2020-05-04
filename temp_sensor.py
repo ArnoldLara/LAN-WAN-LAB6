@@ -22,7 +22,7 @@ seed(0)
 ## Or simply
 #bclient.write('Escenario1', 'Sensor1', '25')
 
-for x in range(0, 10):
+while True:
     #Generar numeros aleatorios
     temp = randint(int(temp_inf),int(temp_sup))
     bclient.write('Escenario1', 'Sensor1', temp)

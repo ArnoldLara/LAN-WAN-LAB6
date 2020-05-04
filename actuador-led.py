@@ -2,21 +2,30 @@ from random import randint
 from random import seed
 import time
 
-temp_inf=0
-temp_sup=50
+#Include the Beebotte SDK for Python
+from beebotte import *
 
-print('Los limites de temperatura varian entre ', temp_inf, 'y' ,temp_sup)
+bclient = BBT("RTuCupjAtBf6Ica9wLSXIwWi", "XfVtQRTeiE5jwjz4eUBchXuUTBZHbRpY")
 
-seed(0)
+# temp_inf=0
+# temp_sup=50
+# print('Los limites de temperatura varian entre ', temp_inf, 'y' ,temp_sup)
 
-for x in range(0, 10):
-    #Generar numeros aleatorios
-    temp = randint(int(temp_inf),int(temp_sup))
-    print(temp)
+# seed(0)
 
-    if temp<25:
+recurso = Resource(bclient,'Escenario1','Sensor1')
+
+
+while True:
+    temp_list = recurso.read(limit = 5)
+    #print(temp_list)
+    temp_dict = temp_list[0]
+    temp = temp_dict['data']
+    print("Temperatura recibida: ",temp)
+
+    if int(temp)<25:
         print('LED-GREEN')
     else:
         print('LED-RED')
 
-    time.sleep(1)
+    #time.sleep(1)

@@ -2,7 +2,7 @@
 from beebotte import *
 import statistics
 import sender_email
-import blinking_email
+import blinking_led
 
 bclient = BBT("RTuCupjAtBf6Ica9wLSXIwWi", "XfVtQRTeiE5jwjz4eUBchXuUTBZHbRpY")
 

@@ -2,6 +2,7 @@
 from beebotte import *
 import statistics
 import sender_email
+import blinking_email
 
 bclient = BBT("RTuCupjAtBf6Ica9wLSXIwWi", "XfVtQRTeiE5jwjz4eUBchXuUTBZHbRpY")
 
@@ -13,8 +14,10 @@ rec3 = Resource(bclient,'Signos_vitales','Oxigeno')
 if input("Desea recibir un email por estado de alerta: (S)(N)") == 'S':
     receiver_email=input("Ingrese su correo electronico: ")
     email=True
+    blinking_email.led('RED',True)
 else:
     email=False
+    blinking_email.led('GREEN',True)
 
 while True:
     gluc_list = rec1.read(limit = 5)

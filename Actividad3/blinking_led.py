@@ -7,14 +7,14 @@ GPIO.setup(10, GPIO.OUT, initial=GPIO.LOW) # Set pin 8 to be an output pin and s
 
 def led(color, state):
     if color == 'RED':
-        if state:
+        if state == 'ON':
             GPIO.output(8, GPIO.HIGH) # Turn on led green
             GPIO.output(10, GPIO.LOW) # Turn off led red
         else:
             GPIO.output(8, GPIO.LOW) # Turn off led red
 
     elif color == 'GREEN':
-        if state:
+        if state == 'ON':
             GPIO.output(8, GPIO.LOW) # Turn on led green
             GPIO.output(10, GPIO.HIGH) # Turn off led red
         else:

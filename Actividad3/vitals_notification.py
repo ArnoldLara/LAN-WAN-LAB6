@@ -71,10 +71,10 @@ while True:
         break
     elif alerta:
         print('ALERTA HAY UNA CONDICIÓN CRITICA.')
-        blinking_email.led('RED',True)
+        blinking_led.led('RED','ON')
         alerta = False
     else:
-        blinking_email.led('GREEN',True)
+        blinking_led.led('GREEN','ON')
 
 
     # if int(temp)<25:

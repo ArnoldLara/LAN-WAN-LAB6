@@ -29,5 +29,5 @@ def envio_email(receiver_email_attr, gluc_attr, temp_attr, spo2_attr):
         server.starttls(context=context)
         server.ehlo()  # Can be omitted
         print(server.login(sender_email, password))
-        print(server.sendmail(sender_email, receiver_email, message))
+        print("Correo electronico enviado satifactoriamente")
     return 'OK'

@@ -1,6 +1,7 @@
 from random import randint
 from random import seed
 import time
+import blinking_led
 
 #Include the Beebotte SDK for Python
 from beebotte import *
@@ -25,7 +26,9 @@ while True:
 
     if int(temp)<25:
         print('LED-GREEN')
+        blinking_led.led('GREEN','ON')
     else:
         print('LED-RED')
+        blinking_led.led('RED','ON')
 
     #time.sleep(1)

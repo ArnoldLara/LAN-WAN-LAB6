@@ -67,7 +67,7 @@ while True:
 
 
     if email and alerta:
-        sender_email.envio_email(receiver_email,glucosa,temperatura,temperatura)
+        sender_email.envio_email(receiver_email,glucosa,temperatura,oxigeno)
         break
     elif alerta:
         print('ALERTA HAY UNA CONDICIÓN CRITICA.')

@@ -14,10 +14,8 @@ rec3 = Resource(bclient,'Signos_vitales','Oxigeno')
 if input("Desea recibir un email por estado de alerta: (S)(N)") == 'S':
     receiver_email=input("Ingrese su correo electronico: ")
     email=True
-    blinking_email.led('RED',True)
 else:
     email=False
-    blinking_email.led('GREEN',True)
 
 while True:
     gluc_list = rec1.read(limit = 5)
@@ -73,8 +71,10 @@ while True:
         break
     elif alerta:
         print('ALERTA HAY UNA CONDICIÓN CRITICA.')
+        blinking_email.led('RED',True)
         alerta = False
-
+    else:
+        blinking_email.led('GREEN',True)
 
 
     # if int(temp)<25:

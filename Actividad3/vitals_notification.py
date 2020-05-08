@@ -67,6 +67,8 @@ while True:
 
 
     if email and alerta:
+        print('ALERTA HAY UNA CONDICIÓN CRITICA.')
+        blinking_led.led('RED','ON')
         sender_email.envio_email(receiver_email,glucosa,temperatura,oxigeno)
         break
     elif alerta:

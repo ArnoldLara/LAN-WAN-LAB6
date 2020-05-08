@@ -61,7 +61,7 @@ while True:
         oxigeno = 'SPO2: Bajo nivel(91% - 94%)'
     elif oxi_mean <=90:
         alerta=True
-        oxigeno = 'SPO2: Problemas de respiración o circulación (< 90%)'
+        oxigeno = 'SPO2: Problemas de respiracion o circulacion (< 90%)'
 
     print(glucosa, temperatura, oxigeno)
 
